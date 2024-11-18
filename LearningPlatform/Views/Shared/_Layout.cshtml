@@ -1,0 +1,145 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - LearningPlatform</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/LearningPlatform.styles.css" asp-append-version="true" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm @* navbar-toggleable-sm *@ navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">LearningPlatform</a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarContent">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" asp-controller="Home" asp-action="Index" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Courses
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-start" aria-labelledby="navbarDropdown">
+
+                                <li class="nav-item dropdown-submenu">
+                                    <a class="dropdown-item dropdown-toggle" asp-controller="Category" asp-action="Programming">Programming</a>
+                                    <ul class="dropdown-menu dropdown-menu-start">
+                                        <li class="nav-item dropdown-submenu">
+                                            <a class="dropdown-item dropdown-toggle" asp-controller="Course" asp-action="ProgrammingLanguage">Programming Language</a>
+                                            <ul class="dropdown-menu dropdown-menu-start">
+                                                <li><a class="dropdown-item" asp-controller="Course" asp-action="Python">Python</a></li>
+                                                <li><a class="dropdown-item" asp-controller="Course" asp-action="CSharp">C#</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="nav-item dropdown-submenu">
+                                            <a class="dropdown-item dropdown-toggle" asp-controller="Course" asp-action="WebDesign">Web Design</a>
+                                            <ul class="dropdown-menu dropdown-menu-start">
+                                                <li><a class="dropdown-item" asp-controller="Learn" asp-action="Django">Django</a></li>
+                                                <li><a class="dropdown-item" asp-controller="Learn" asp-action="ASP.Net-Core">ASP.Net Core</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="nav-item dropdown-submenu">
+                                            <a class="dropdown-item dropdown-toggle" asp-controller="Course" asp-action="Database">Database</a>
+                                            <ul class="dropdown-menu dropdown-menu-start">
+                                                <li><a class="dropdown-item" asp-controller="Learn" asp-action="MySQL">MySQL</a></li>
+                                                <li><a class="dropdown-item" asp-controller="Learn" asp-action="SQL-Server">SQL Server</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="nav-item dropdown-submenu">
+                                    <a class="dropdown-item dropdown-toggle" asp-controller="Category" asp-action="ITSoftware">IT & Software</a>
+                                    <ul class="dropdown-menu dropdown-menu-start">
+                                        <li class="nav-item dropdown-submenu">
+                                            <a class="dropdown-item dropdown-toggle" asp-controller="Learn" asp-action="Operating-System">Operating System</a>
+                                            <ul class="dropdown-menu dropdown-menu-start">
+                                                <li><a class="dropdown-item" asp-controller="Learn" asp-action="Windows">Windows</a></li>
+                                                <li><a class="dropdown-item" asp-controller="Learn" asp-action="Linux">Linux</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="nav-item dropdown-submenu">
+                                            <a class="dropdown-item dropdown-toggle" asp-controller="Learn" asp-action="Network">Network</a>
+                                            <ul class="dropdown-menu dropdown-menu-start">
+                                                <li><a class="dropdown-item" asp-controller="Learn" asp-action="CCNA">CCNA</a></li>
+                                                <li><a class="dropdown-item" asp-controller="Learn" asp-action="Microssoft">Microsoft</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="nav-item dropdown-submenu">
+                                            <a class="dropdown-item dropdown-toggle" asp-controller="Learn" asp-action="DevOps">DevOps</a>
+                                            <ul class="dropdown-menu dropdown-menu-start">
+                                                <li><a class="dropdown-item" asp-controller="Learn" asp-action="Cloud">Cloud</a></li>
+                                                <li><a class="dropdown-item" asp-controller="Learn" asp-action="Docker">Docker</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="nav-item dropdown-submenu">
+                                    <a class="dropdown-item dropdown-toggle" asp-controller="Category" asp-action="Language">Language</a>
+                                    <ul class="dropdown-menu dropdown-menu-start">
+                                        <li class="nav-item dropdown-submenu">
+                                            <a class="dropdown-item dropdown-toggle" asp-controller="Learn" asp-action="English">English</a>
+                                            <ul class="dropdown-menu dropdown-menu-start">
+                                                <li><a class="dropdown-item" asp-controller="Learn" asp-action="English-speaking">Speaking</a></li>
+                                                <li><a class="dropdown-item" asp-controller="Learn" asp-action="English-listening">Listening</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="nav-item dropdown-submenu">
+                                            <a class="dropdown-item dropdown-toggle" asp-controller="Learn" asp-action="French">French</a>
+                                            <ul class="dropdown-menu dropdown-menu-start">
+                                                <li><a class="dropdown-item" asp-controller="Learn" asp-action="French-speaking">Speaking</a></li>
+                                                <li><a class="dropdown-item" asp-controller="Learn" asp-action="French-listening">Listening</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="nav-item dropdown-submenu">
+                                            <a class="dropdown-item dropdown-toggle" asp-controller="Learn" asp-action="Germany">Germany</a>
+                                            <ul class="dropdown-menu dropdown-menu-start">
+                                                <li><a class="dropdown-item" asp-controller="Learn" asp-action="Germany-speaking">Speaking</a></li>
+                                                <li><a class="dropdown-item" asp-controller="Learn" asp-action="Germany-listening">Listening</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <div class="mx-auto">
+                        <form class="d-flex">
+                            <input type="search" class="form-control me-2" placeholder="Type to search...">
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
+                    </div>
+
+                    <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                        <partial name="_LoginPartial.cshtml" />
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2024 - LearningPlatform - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
